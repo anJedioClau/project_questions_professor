@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avaliações de Professores</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tiny.cloud/1/eooslwt832rh0ca76895r3wwzkformshssatltqwvtx6fdj7/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Nova avaliação</h2>
+    <div class="container_prova">
+      <label for="tipo_prova">Tipo de prova</label>
+      <select name="tipo_prova" id="tipo_prova">
+        <option value="">-- selecione --</option>
+        <option value="">Prova objetiva</option>
+        <option value="">Prova discursiva</option>
+      </select>
+    </div>
+    <p style="margin: 20px 0 10px 0;">Matriz de competências</p>
+    <div class="matrizes">
+
+      <div class="container_curso">
+        <label for="curso">Curso</label>
+        <select name="curso" id="curso">
+          <option value="">-- selecione --</option>
+          <option value="">Educação Infantil</option>
+          <option value="">Ensino Fundamental</option>
+          <option value="">Ensino Médio</option>
+        </select>
+      </div>
+
+
+      <div class="container_etapa">
+        <label for="etapa">Etapa</label>
+        <select name="etapa" id="etapa">
+          <option value="">-- selecione --</option>
+          <option value="">1º ANO</option>
+          <option value="">2º ANO</option>
+          <option value="">3º ANO</option>
+          <option value="">4º ANO</option>
+          <option value="">5º ANO</option>
+        </select>
+      </div>
+
+
+      <div class="container_disciplina">
+        <label for="disciplina">Disciplina</label>
+        <select name="disciplina" id="disciplina">
+          <option value="">-- selecione --</option>
+          <option value="">Língua Portuguesa</option>
+          <option value="">Matemática</option>
+          <option value="">Ciências</option>
+          <option value="">História</option>
+          <option value="">Geografia</option>
+        </select>
+      </div>
+    </div>
+
+
+
+    <div class="container_marcadores">
+      <label for="marcadores">Marcadores</label>
+      <textarea name="marcadores" id="marcadores" cols="30" rows="1" placeholder="Adicionar marcadores"></textarea>
+    </div>
+
+    <div class="inserir_img">
+      <p>Inserir imagem</p>
+      <label for="imagem" class="custom-file-upload">Selecione uma imagem:</label>
+      <div class="input-wrapper">
+        <input type="file" id="imagem" name="imagem">
+      </div>
+    </div>
+
+
+    <div class="editor">
+      <p>Enunciado</p>
+      <textarea id="text">
+     Welcome to TinyMCE!
+  </textarea>
+    </div>
+
+    <div class="alternativas">
+      <p>Alternativas</p>
+      div.
+      <button class="Correta" value="alternativaA">Correta</button>
+      <button class="Incorreta" value="alternativaB">Incorreta</button>
+      <button class="Incorreta" value="alternativaC">Incorreta</button>
+      <button class="Incorreta" value="alternativaD">Incorreta</button>
+      <button class="Incorreta" value="alternativaE">Incorreta</button>
+    </div>
+
+    <div class="btns">
+      <button>Salvar</button>
+      <button>Salvar e criar nova questão</button>
+    </div>
+
+
+
+    <script>
+      tinymce.init({
+        selector: '#text',
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+        mergetags_list: [
+          { value: 'First.Name', title: 'First Name' },
+          { value: 'Email', title: 'Email' },
+        ]
+      });
+    </script>
+</body>
+
+</html>
